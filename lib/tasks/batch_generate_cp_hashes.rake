@@ -45,6 +45,6 @@ def generate_cp_hash(p_id)
 end
 
 def cp_calculator(level, s, a, d)
-  cp = (a * s ** 0.5 * d ** 0.5 * LEVEL_MULTIPLIER[level] * LEVEL_MULTIPLIER[level] / 10).round
+  cp = (a * s ** 0.5 * d ** 0.5 * LEVEL_MULTIPLIER[level] * LEVEL_MULTIPLIER[level] / 10).truncate
   cp > 10 ? cp : 10
 end
